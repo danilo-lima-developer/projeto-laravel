@@ -1,0 +1,1 @@
+Pagina Categoria : {{$slug}}

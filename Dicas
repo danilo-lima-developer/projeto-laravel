@@ -1,0 +1,4 @@
+Criando controllers pelo terminal
+
+CRUD: php artisan make:controller Site/ContactController -r 
+STATIC PAGE: php artisan make:controller Site/BlogController --invokable
