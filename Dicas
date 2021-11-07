@@ -1,4 +1,25 @@
-Criando controllers pelo terminal
+Criando CONTROLLERS pelo terminal:
 
 CRUD: php artisan make:controller Site/ContactController -r 
 STATIC PAGE: php artisan make:controller Site/BlogController --invokable
+
+
+Criando MIGRATIONS:
+
+php artisan make:model Contact -f -m -s
+
+
+OBS: Primeira Letra maiúscula e no singular
+php artisan make:model --help
+
+-f -> Factory -> database/factories
+-m -> Model  -> database/migrations
+-s -> seed -> database/seeds
+
+Model é criado na pasta raiz app
+
+Para rodar a migration -> php artisan migrate
+
+arquivo .env para configurar banco de dados
+
+php artisan migrate:fresh -> Apaga todas tabelas e roda as migrations novamente
