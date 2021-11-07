@@ -23,3 +23,13 @@ Para rodar a migration -> php artisan migrate
 arquivo .env para configurar banco de dados
 
 php artisan migrate:fresh -> Apaga todas tabelas e roda as migrations novamente
+
+
+DICAS:
+
+ php artisan config:cache -> Para quando alterar o arquivo .env
+
+ php artisan make:notification NewContact -> Está relacionado ao envio de e-mail na pagina de contato  (Ler a documentação)
+
+  php artisan queue:table -> criar tabela para filas
+  php artisan migrate -> atualizar com novas alterações
