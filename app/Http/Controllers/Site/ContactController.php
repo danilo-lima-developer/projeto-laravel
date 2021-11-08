@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Site;
 
 use App\Contact;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactFormRequest;
 use App\Notifications\NewContact;
 use Illuminate\Http\Request;
-use Notification; //use Illuminate\Notifications\Notification;
+use Notification; 
+//use Illuminate\Notifications\Notification;
 
 class ContactController extends Controller
 {
@@ -20,12 +22,21 @@ class ContactController extends Controller
         return view('site.contact.index');
     }
 
-    public function form(Request $request)
-    {
+    public function form(ContactFormRequest $request)
+    { 
+        //dd($request->all());
         $contact = Contact::create($request->all());
         Notification::route('mail', config('mail.from.address'))
-        ->notify(new NewContact($contact));
+            ->notify(new NewContact($contact));
 
-        ddd($contact); // Retirar o método all para visualizar todos os parâmetros
+        toastr()->success('O contato foi inserido com sucesso!');
+        return back();
+
+        
+        // return redirect()->route('site.contact')->with([
+        //     'success' => true,
+        //     'message' => 'O contato foi criado com sucesso!'
+        // ]);
+        //ddd($contact); // Retirar o método all para visualizar todos os parâmetros
     }
 }

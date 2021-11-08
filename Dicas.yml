@@ -33,3 +33,12 @@ DICAS:
 
   php artisan queue:table -> criar tabela para filas
   php artisan migrate -> atualizar com novas alterações
+php artisan queue:work --tries=3 -> rodar a fila para envio de e-mail com a tabela
+
+  php artisan make:request ContactFormRequest -> Utilizei para criar a classe de validação no ContactController.php
+
+  composer require yoeunes/toastr -> utilizado para mensagens de retorno erro
+   php artisan vendor:publish -> publicar os arquivos -> ESCOLHER A [9 ] Provider Yoeunes\Toastr\ToastrServiceProvider
+
+   TESTE: 
+    php artisan test -> vai rodar os testes estruturados
