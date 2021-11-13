@@ -1,3 +1,7 @@
+Criando Projeto na versão 7: composer create-project --prefer-dist laravel/laravel:^7.0 projeto-laravel
+
+
+
 Criando CONTROLLERS pelo terminal:
 
 CRUD: php artisan make:controller Site/ContactController -r 
