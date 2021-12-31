@@ -26,23 +26,25 @@ Para rodar a migration -> php artisan migrate
 
 arquivo .env para configurar banco de dados
 
-php artisan migrate:fresh -> Apaga todas tabelas e roda as migrations novamente
+php artisan migrate:fresh: Apaga todas tabelas e roda as migrations novamente
+
+php artisan make:migration add_description_to_categories_table: sintaxe para adição de coluna em uma tabela
 
 
 DICAS:
 
- php artisan config:cache -> Para quando alterar o arquivo .env
+ php artisan config:cache: Para quando alterar o arquivo .env
 
- php artisan make:notification NewContact -> Está relacionado ao envio de e-mail na pagina de contato  (Ler a documentação)
+ php artisan make:notification NewContact: Está relacionado ao envio de e-mail na pagina de contato  (Ler a documentação)
 
-  php artisan queue:table -> criar tabela para filas
-  php artisan migrate -> atualizar com novas alterações
-php artisan queue:work --tries=3 -> rodar a fila para envio de e-mail com a tabela
+  php artisan queue:table: criar tabela para filas
+  php artisan migrate: atualizar com novas alterações
+php artisan queue:work --tries=3: rodar a fila para envio de e-mail com a tabela
 
-  php artisan make:request ContactFormRequest -> Utilizei para criar a classe de validação no ContactController.php
+  php artisan make:request ContactFormRequest: Utilizei para criar a classe de validação no ContactController.php
 
-  composer require yoeunes/toastr -> utilizado para mensagens de retorno erro
-   php artisan vendor:publish -> publicar os arquivos -> ESCOLHER A [9 ] Provider Yoeunes\Toastr\ToastrServiceProvider
+  composer require yoeunes/toastr: utilizado para mensagens de retorno erro
+   php artisan vendor:publish: publicar os arquivos -> ESCOLHER A [9 ] Provider Yoeunes\Toastr\ToastrServiceProvider
 
    TESTE: 
-    php artisan test -> vai rodar os testes estruturados
+    php artisan test: vai rodar os testes estruturados
