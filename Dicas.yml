@@ -48,3 +48,10 @@ php artisan queue:work --tries=3: rodar a fila para envio de e-mail com a tabela
 
    TESTE: 
     php artisan test: vai rodar os testes estruturados
+
+CRIANDO TESTE DE INSERÇÃO COM O PHP TINKER
+
+php artisan tinker
+
+$category = Category::create(['name' => 'Fone de ouvido gamer', 'slug' =>'Fone de ouvido gamer',
+'image' => '12424', 'description' => 'Categoria']);
